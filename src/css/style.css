@@ -2,14 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 body {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ebe0e0;
+  background: #ebe4e0;
 }
 .container {
   position: relative;
@@ -48,5 +48,5 @@ body {
   transform: scale(0.99);
 }
 .operator {
-  color: #ff2f2f;
+  color: #ff4b2f;
 }
