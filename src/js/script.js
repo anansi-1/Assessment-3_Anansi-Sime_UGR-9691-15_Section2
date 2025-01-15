@@ -4,6 +4,7 @@ const specialChars = ["%", "*", "/", "-", "+", "="];
 let output = "";
 
 const calculate = (btnValue) => {
+  display.focus();
   if (btnValue === "=" && output !== "") {
     output = eval(output.replace("%", "/100"));
   } else if (btnValue === "AC") {
@@ -14,12 +15,9 @@ const calculate = (btnValue) => {
     if (output === "" && specialChars.includes(btnValue)) return;
     output += btnValue;
   }
-  display.textContent = output;
+  display.value = output;
 };
 
 buttons.forEach((button) => {
   button.addEventListener("click", (e) => calculate(e.target.dataset.value));
-  button.addEventListener("touchstart", (e) =>
-    calculate(e.target.dataset.value)
-  );
 });
